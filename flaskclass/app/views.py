@@ -1,11 +1,9 @@
 from app import app
 from flask import render_template
 
+from random import randint
+
 @app.route('/')
 def lucky_static():
-	return "Your lucky number is 7"
-
-@app.route('/tpl/')
-def lucky_tpl():
-	lucky_num = 6
+	lucky_num = randint(1, 10)
 	return render_template('simple.html', lucky_num=lucky_num)
