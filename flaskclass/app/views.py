@@ -7,4 +7,5 @@ def lucky_static():
 
 @app.route('/tpl/')
 def lucky_tpl():
-	return render_template('simple.html')
+	lucky_num = 6
+	return render_template('simple.html', lucky_num=lucky_num)
