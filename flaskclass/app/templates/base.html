@@ -3,6 +3,9 @@
 		<link rel='stylesheet' type='text/css' href='/static/css/bootstrap.css'>
 	</head>
 	<body>
-		{% block content %}{% endblock %}
+		<div class='span9'>
+			{% block page_title %}{% endblock %}
+			{% block content %}{% endblock %}
+		</div>
 	</body>
 </html>

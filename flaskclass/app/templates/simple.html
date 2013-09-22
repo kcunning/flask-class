@@ -1,7 +1,10 @@
 {% extends "base.html" %}
-		
-{% block content %}
+
+{% block page_title %}
 	<h1>Welcome to your lucky number generator!</h1>
+{% endblock %}
+
+{% block content %}
 	<p>Your lucky number is:</p>
 	<p>{{ lucky_num }}</p>
 {% endblock %}
