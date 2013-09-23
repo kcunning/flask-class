@@ -1,6 +1,8 @@
 from app import app
 from flask import render_template
 
+from forms import GetLucky
+
 from random import randint
 
 @app.route('/')
@@ -21,3 +23,8 @@ def game():
 		if not n in game_nums:
 			game_nums.append(n)
 	return render_template('game.html', game_nums = game_nums)
+
+@app.route('/nums/', methods=['GET', 'POST'])
+def get_nums():
+	form = GetLucky()
+	return render_template('get_lucky.html', form=form)
