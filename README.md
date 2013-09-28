@@ -83,13 +83,14 @@ Section 3
   * Let's talk about git...
 * A five minute review of Python!
 * Basic flask site
-* Adding a template
-* Adding variables
-* It's just Python! (adding random)
-* Adding a new view
-* Using jinja functionality
-* Inheriting templates
-* Let's make it pretty... (adding Bootstrap)
+  * Adding a template
+  * Adding variables
+  * It's just Python! (adding random)
+  * Adding a new view
+* Advanced templates and styling
+  * Using jinja functionality
+  * Inheriting templates
+  * Let's make it pretty... (adding Bootstrap)
 * Let's add some forms
   * Install WTForms
   * Let's talk about requirements.txt
