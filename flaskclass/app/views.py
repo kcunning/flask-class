@@ -23,7 +23,6 @@ def get_game_nums(num=5, max=10):
 			game_nums.append(n)
 	return game_nums
 
-
 @app.route('/game/')
 def game():
 	game_nums = get_game_nums()
@@ -34,8 +33,13 @@ def get_nums():
 	form = GetLucky()
 	if request.method == 'POST':
 		numbers = form.numbers.data
-		game_nums = get_game_nums()	
+		game_nums = get_game_nums()
+		nums = numbers.split()
+		wins = 0
+		for num in nums:
+			if int(num) in game_nums:
+				wins += 1
 		return render_template('game.html', game_nums=game_nums,
-					player_nums=numbers)
+					player_nums=numbers, wins=wins)
 	if request.method == 'GET':	
 		return render_template('get_lucky.html', form=form)
