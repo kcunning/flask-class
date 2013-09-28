@@ -31,15 +31,18 @@ def game():
 @app.route('/nums/', methods=['GET', 'POST'])
 def get_nums():
 	form = GetLucky()
-	if request.method == 'POST':
-		numbers = form.numbers.data
-		game_nums = get_game_nums()
-		nums = numbers.split()
-		wins = 0
-		for num in nums:
-			if int(num) in game_nums:
-				wins += 1
-		return render_template('game.html', game_nums=game_nums,
+	if form.validate_on_submit():
+		if request.method == 'POST':
+			numbers = form.numbers.data
+			game_nums = get_game_nums()
+			nums = numbers.split()
+			wins = 0
+			for num in nums:
+				if int(num) in game_nums:
+					wins += 1
+			return render_template('game.html', game_nums=game_nums,
 					player_nums=numbers, wins=wins)
+	else:
+		return render_template('get_lucky.html', form=form)
 	if request.method == 'GET':	
 		return render_template('get_lucky.html', form=form)
