@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+	<h1>Lucky number game!</h1>
+{% endblock %}
+
+{% block content %}
+	<form action="" method="post" name="get_lucky">
+		{{ form.hidden_tag() }}
+		<label for="numbers">Lucky numbers:</label>
+		{{ form.numbers }}</br>
+		<input type="submit">
+	</form>
+{% endblock %}
+
