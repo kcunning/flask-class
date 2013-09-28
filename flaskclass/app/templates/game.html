@@ -7,4 +7,6 @@
 {% block content %}
 	<p>The winning numbers...</p>
 	<p>{% for num in game_nums %}{{ num }} {% endfor %}</p>
+	<p>Your numbers:</p>
+	<p>{{ player_nums }}</p>
 {% endblock %}
