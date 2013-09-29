@@ -5,6 +5,13 @@
 {% endblock %}
 
 {% block content %}
+	{% for field in form.errors %}
+		{% for error in form.errors[field] %}
+    			<div class="alert alert-error">
+        			<strong>Error!</strong> {{error}}
+    			</div>
+		{% endfor %}
+	{% endfor %}
 	<form action="" method="post" name="get_lucky">
 		{{ form.hidden_tag() }}
 		<label for="numbers">Lucky numbers:</label>
