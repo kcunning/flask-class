@@ -1,0 +1,114 @@
+== Class outline
+
+=== What do I need?
+
+You're going to need:
+
+* An Internet connection (we'll be installing stuff!)
+* Admin rights to your computer (can you install things without someone else's permission?)
+* Python 2.7
+
+It would be nice if, before the class, you installed:
+
+* easy_install
+* pip
+* Git
+
+=== What is Flask?
+
+Flask is a microframework that helps you use Python to create webpages. It gives you enough tools to help make your job easier without getting so complex that it gets in your way. 
+
+So, Flask takes care of things like rendering webpages and serving them, as well as working with templates. It doesn't deal with database normalization (like Django) or content management (like Plone).
+
+Flask isn't a toy, though! It's small but mighty. You can do quite a bit with it, and you may never outgrow it (it simply depends on your needs). Even if you do, you can carry what you learn here over to your next framework or CMS.
+
+=== What will we be covering?
+
+* Creating a basic flask app
+* Templates
+** Blocks
+** Inheriting
+** Loops
+** If statements
+* Views
+** Sending values
+* Pip + requirement files
+* Forms
+
+=== Installing
+
+=== How this class works
+
+We're working out of a Git repo where nearly every commit is the app at a particular point in time. So, we'll be checking out specific commits, see what they do, then moving on to the next commit.
+
+If you're not familiar with git, don't panic! Each section has *exactly* what you need to enter so that you can follow alone.
+
+=== Basic Flask app
+
+Let's check out our first commit.
+
+----
+$ git checkout 3b587f3
+----
+
+And let's see what the difference is:
+
+----
+$ git diff 2452b06
+----
+
+We have just a few files and one folder:
+
+* run.py -- This will be what we run every time we want to have Flask serve our website
+* app/ -- Contains everything for our web app.
+* app/__init__.py -- Sets up our Flask app
+* app/views.py -- Sets up all of the views for our Flask app.
+
+Before we talk about what each of these files does, let's see what our app is doing. In your terminal, do the following:
+
+----
+$ python run.py
+----
+
+=== Using a basic template
+
+=== Using variables
+
+=== It's really just Python!
+
+=== Sending values
+
+=== Templates: Loops
+
+=== Templates: Inheriting
+
+=== Let's add Bootstrap
+
+=== Templates: Blocks
+
+=== Pip: Requirements files
+
+=== Adding a form
+
+=== Custom validation
+
+
+ee49b28 Added errors to go with our form validation
+4f4e439 I needed more subbullets
+9e37cf8 Updated the README like woahs
+595a24c Added some custom validation
+7ddefef Game actually runs now
+ffe2122 We now get numbers from the user and go to a different page if we've submitted the form
+6d58f8a Adding a form (forgot the template)
+819b0f0 Adding a form to nowhere
+f5795d5 Adding requirements file
+e939453 Adding another block to our template
+053a379 Adding css via bootstrap
+fa9da2d Adding a base template
+536259c Added a game to show for loops
+d94c684 Added 'max' view
+5c505d8 Adding random
+4859570 Using variables
+c272bbc Using a basic template
+3b587f3 Adding the most basic files
+2452b06 Initial commit
