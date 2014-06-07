@@ -37,6 +37,8 @@ Flask isn't a toy, though! It's small but mighty. You can do quite a bit with it
 
 === Installing
 
+* `pip install flask`
+
 === How this class works
 
 We're working out of a Git repo where nearly every commit is the app at a particular point in time. So, we'll be checking out specific commits, see what they do, then moving on to the next commit.
