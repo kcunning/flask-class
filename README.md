@@ -1,7 +1,7 @@
 flask-class
 ===========
 
-This is the repo for an upcoming Flask class, to be taught for DC PyLadies.
+This is the repo for a Flask class I teach fairly often for DC PyLadies.
 
 Topics covered in this class:
 
